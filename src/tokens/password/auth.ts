@@ -1,4 +1,5 @@
-import { User, Ticket, IAuthService, JSONWebToken, Password } from '@digitalpersona/access-management';
+import { User, Ticket, JSONWebToken, Password } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { CustomAction } from './actions';
 import { Authenticator } from '../../private';
 

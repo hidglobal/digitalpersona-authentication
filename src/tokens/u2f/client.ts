@@ -1,6 +1,6 @@
 import * as u2fApi from 'u2f-api';
-import { Base64UrlString, Utf16, Base64Url } from '@digitalpersona/access-management';
-import { AuthenticationData, IAuthenticationClient } from '../workflows';
+import { Base64UrlString, Utf16, Base64Url } from '@digitalpersona/core';
+import { AuthenticationData, IAuthenticationClient } from '@digitalpersona/services';
 import { HandshakeData, HandshakeType } from './data';
 
 /**@internal

@@ -1,10 +1,10 @@
-﻿import { Credential, JSONWebToken, IAuthService } from '@digitalpersona/access-management';
-import { WindowsAuthClient } from '@digitalpersona/device-access';
+﻿import { Credential, JSONWebToken } from '@digitalpersona/core';
+import { IAuthService, IAuthenticationClient } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class WindowsAuth extends Authenticator
 {
-    constructor(authService: IAuthService, client: WindowsAuthClient) {
+    constructor(authService: IAuthService, client: IAuthenticationClient) {
         super(authService, client)
     }
 

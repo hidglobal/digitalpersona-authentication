@@ -1,6 +1,7 @@
 import { SmartCardAuth } from './auth';
 import { Env } from '../../test';
-import { User, AuthService } from '@digitalpersona/access-management';
+import { User } from '@digitalpersona/core';
+import { AuthService } from '@digitalpersona/services';
 
 describe("CardsApi: ", ()=>
 {

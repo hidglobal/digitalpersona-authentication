@@ -1,4 +1,5 @@
-import { User, Utf8, IAuthService, JSONWebToken, Credential, Fingerprints, BioSample } from '@digitalpersona/access-management';
+import { User, Utf8, JSONWebToken, Credential, Fingerprints, BioSample } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Finger, Fingers } from './data';
 import { Authenticator } from '../../private';
 

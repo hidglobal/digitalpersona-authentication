@@ -1,4 +1,4 @@
-import { AuthenticationHandle } from '@digitalpersona/access-management';
+import { AuthenticationHandle } from '@digitalpersona/services';
 
 /** @internal */
 export enum HandshakeStep

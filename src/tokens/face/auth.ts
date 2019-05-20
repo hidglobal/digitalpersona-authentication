@@ -1,4 +1,5 @@
-import { User, JSONWebToken, BioSample, Face, IAuthService } from '@digitalpersona/access-management'
+import { User, JSONWebToken, BioSample, Face } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class FaceAuth extends Authenticator

@@ -1,4 +1,5 @@
-import { User, IAuthService, JSONWebToken, PIN } from '@digitalpersona/access-management';
+import { User, JSONWebToken, PIN } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class PinAuth extends Authenticator

@@ -1,7 +1,7 @@
 import { Env } from '../../test'
 import { SecurityQuestionsAuth } from '.'
-import { AuthService, User } from '@digitalpersona/access-management';
-import { Answer } from './data';
+import { User, Answer } from '@digitalpersona/core';
+import { AuthService } from '@digitalpersona/services';
 
 describe("Questions Token: ", ()=>
 {

@@ -1,6 +1,7 @@
 import { Env } from '../../test'
 import { U2FAuth } from '.';
-import { AuthService, User } from '@digitalpersona/access-management';
+import { User } from '@digitalpersona/core';
+import { AuthService } from '@digitalpersona/services';
 
 describe("U2F Token: ", ()=>
 {

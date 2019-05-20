@@ -1,6 +1,7 @@
 import { Env } from '../../test';
 import { FingerprintsAuth } from './auth';
-import { User, AuthService } from '@digitalpersona/access-management';
+import { User } from '@digitalpersona/core';
+import { AuthService } from '@digitalpersona/services';
 
 describe("FingerprintsApi: ", () =>
 {

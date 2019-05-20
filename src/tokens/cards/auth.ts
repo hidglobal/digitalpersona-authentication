@@ -1,4 +1,5 @@
-import { User, IAuthService, JSONWebToken, SmartCard, ContactlessCard, ProximityCard } from '@digitalpersona/access-management';
+import { User, JSONWebToken, SmartCard, ContactlessCard, ProximityCard } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class SmartCardAuth extends Authenticator
@@ -32,7 +33,7 @@ export class ContactlessCardAuth extends Authenticator
     public identify(cardData: string): Promise<JSONWebToken>
     {
         return this.authService
-            .IdentifyUser(new ContactlessCard(cardData))
+            .Identify(new ContactlessCard(cardData))
             .then(ticket => ticket.jwt);
     }
 }
@@ -53,7 +54,7 @@ export class ProximityCardAuth extends Authenticator
     public identify(cardData: string): Promise<JSONWebToken>
     {
         return this.authService
-            .IdentifyUser(new ProximityCard(cardData))
+            .Identify(new ProximityCard(cardData))
             .then(ticket => ticket.jwt);
     }
 }

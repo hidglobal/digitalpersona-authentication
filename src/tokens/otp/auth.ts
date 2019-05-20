@@ -1,4 +1,5 @@
-import { User, IAuthService, JSONWebToken, Ticket, Credential, Base64Url, TimeOTP, SmsOTP, EmailOTP, PushNotification, HardwareTimeOTP } from '@digitalpersona/access-management';
+import { User, JSONWebToken, Ticket, Credential, TimeOTP, SmsOTP, EmailOTP, PushNotification } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { CustomAction } from './actions'
 import { Authenticator } from '../../private';
 
@@ -61,7 +62,7 @@ export class SmsOtpAuth extends Authenticator
 }
 
 
-export class EmailOtpAUth extends Authenticator
+export class EmailOtpAuth extends Authenticator
 {
     constructor(authService: IAuthService) {
         super(authService)

@@ -1,5 +1,6 @@
 import * as u2fApi from 'u2f-api';
-import { User, Credential, JSONWebToken, IAuthService, Ticket } from '@digitalpersona/access-management';
+import { User, Credential, JSONWebToken, Ticket } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 import { CustomAction, U2FAppId } from './actions';
 import { U2FClient } from './client';

@@ -1,4 +1,4 @@
-import { Utf16, Base64UrlString } from "@digitalpersona/access-management";
+import { Utf16, Base64UrlString } from "@digitalpersona/core";
 
 export type OTPCode = string;
 

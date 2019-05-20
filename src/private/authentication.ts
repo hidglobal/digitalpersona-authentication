@@ -1,13 +1,13 @@
-import { JSONWebToken, Ticket, AuthenticationStatus, User, Credential, CredentialId, Base64UrlString, Base64Url, IAuthService } from '@digitalpersona/access-management';
+import { JSONWebToken, Ticket, User, Credential, CredentialId, Base64UrlString, Base64Url } from '@digitalpersona/core';
+import { IAuthService, AuthenticationStatus } from '@digitalpersona/services';
 import { HandshakeStep, HandshakeContext } from './handshake';
 
-/** @internal */
 export class AuthenticationData
 {
     public readonly handle: number;
     public readonly data: string;
 }
-/** @internal */
+
 export interface IAuthenticationClient
 {
     init(): Promise<AuthenticationData>;
@@ -31,12 +31,12 @@ export abstract class Authenticator
     }
     public _identify(cred: Credential): Promise<JSONWebToken> {
         return this.authService
-            .IdentifyUser(cred)
+            .Identify(cred)
             .then(ticket => ticket.jwt);
     }
 }
 
-
+/** @internal */
 function authenticate(
     identity: User | JSONWebToken | null,
     credential: Credential | CredentialId,
@@ -46,11 +46,11 @@ function authenticate(
 {
     // When credential data are present, use a direct authentication flow
     if (credential instanceof Credential) {
-        if (!identity) identity = "*";
+        if (!identity) identity = User.Everyone();
         return (identity instanceof User
-            ? server.AuthenticateUser(identity, credential)
-            : server.AuthenticateTicket(new Ticket(identity), credential))
-        .then(ticket => ticket.jwt);
+            ? server.Authenticate(identity, credential)
+            : server.Authenticate(new Ticket(identity), credential)
+        ).then(ticket => ticket.jwt);
     }
 
     // When no credential data are present, use a challenge-response authentication flow
@@ -69,8 +69,8 @@ function authenticate(
             }
             case HandshakeStep.InitServer: {
                 return ((identity === null) || (identity instanceof User)
-                    ? server.CreateUserAuthentication(identity, credential)
-                    : server.CreateTicketAuthentication(new Ticket(identity), credential))
+                    ? server.CreateAuthentication(identity, credential)
+                    : server.CreateAuthentication(new Ticket(identity), credential))
                 .then(handle => nextStep(context.withServerHandle(handle)));
             }
             case HandshakeStep.ContinueClient: { return client

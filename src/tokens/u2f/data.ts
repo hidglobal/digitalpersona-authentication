@@ -1,4 +1,4 @@
-import { Base64UrlString } from "@digitalpersona/access-management";
+import { Base64UrlString } from "@digitalpersona/core";
 
 /**@internal
  *

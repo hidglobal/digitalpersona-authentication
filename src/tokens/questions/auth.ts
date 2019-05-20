@@ -1,4 +1,5 @@
-import { User, Credential, IAuthService, Utf16, JSONWebToken, SecurityQuestions, Questions, Answers, Question } from '@digitalpersona/access-management';
+import { User, Credential, Utf16, JSONWebToken, SecurityQuestions, Questions, Answers, Question } from '@digitalpersona/core';
+import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class SecurityQuestionsAuth extends Authenticator

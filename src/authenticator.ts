@@ -1,4 +1,6 @@
-import { User, IAuthService, IPolicyService, CredentialId, ResourceActions, ContextualInfo, Policy, JSONWebToken, JWT } from '@digitalpersona/access-management'
+import { User, CredentialId, JSONWebToken, JWT } from '@digitalpersona/core';
+import { IAuthService, IPolicyService, ResourceActions, ContextualInfo, Policy } from '@digitalpersona/services';
+
 //import { WindowsAuthClient } from './devices';
 
 /*

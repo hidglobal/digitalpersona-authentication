@@ -1,4 +1,4 @@
-import { Credential, Base64UrlString } from "@digitalpersona/access-management";
+import { Credential, Base64UrlString } from "@digitalpersona/core";
 
 export class BehaviorCredentialData
 {
