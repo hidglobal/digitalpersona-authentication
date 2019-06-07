@@ -26,7 +26,12 @@ export abstract class Authenticator
             throw new Error("authService");
     }
 
-    protected _authenticate(identity: User|JSONWebToken|null, credential: Credential|CredentialId): Promise<JSONWebToken> {
+    protected _authenticate(
+        identity: User|JSONWebToken|null,
+        credential: Credential|CredentialId,
+    )
+    : Promise<JSONWebToken>
+    {
         return authenticate(identity, credential, this.authService, this.authClient);
     }
     public _identify(cred: Credential): Promise<JSONWebToken> {
@@ -55,56 +60,55 @@ function authenticate(
 
     // When no credential data are present, use a challenge-response authentication flow
     if (!client)
-        return Promise.reject(new Error("Client"))
+        return Promise.reject(new Error("Client"));
 
     // Performs one step in an authentication workflow and recursively calls itself for a next step.
     // The workflow finishes when a token obtained, or an error produced.
-    const nextStep = (context: HandshakeContext): Promise<JSONWebToken> =>
+    const nextStep = (ctx: HandshakeContext): Promise<JSONWebToken> =>
     {
-        switch(context.nextStep())
+        switch (ctx.nextStep())
         {
             case HandshakeStep.InitClient: { return client
                 .init()
-                .then(data => nextStep(context.withClientHandle(data.handle).withClientData(data.data)));
+                .then(data => nextStep(ctx.withClientHandle(data.handle).withClientData(data.data)));
             }
             case HandshakeStep.InitServer: {
                 return ((identity === null) || (identity instanceof User)
                     ? server.CreateAuthentication(identity, credential)
                     : server.CreateAuthentication(new Ticket(identity), credential))
-                .then(handle => nextStep(context.withServerHandle(handle)));
+                .then(handle => nextStep(ctx.withServerHandle(handle)));
             }
             case HandshakeStep.ContinueClient: { return client
-                .continue(context.clientHandle, context.serverData!)
-                .then(clientData => nextStep(context.withClientData(clientData)));
+                .continue(ctx.clientHandle, ctx.serverData!)
+                .then(clientData => nextStep(ctx.withClientData(clientData)));
             }
             case HandshakeStep.ContinueServer: { return server
-                .ContinueAuthentication(context.serverHandle, Base64Url.fromUtf8(context.clientData!))
+                .ContinueAuthentication(ctx.serverHandle, Base64Url.fromUtf8(ctx.clientData!))
                 .then(result => {
                     switch (result.status) {
                         case AuthenticationStatus.Error:
                             return Promise.reject(new Error("Authentication failed"));
                         case AuthenticationStatus.Continue:
-                            return nextStep(context.withServerData(result.authData))
+                            return nextStep(ctx.withServerData(result.authData));
                         case AuthenticationStatus.Completed:
                             return Promise.resolve(result.jwt);
                         default:
                             throw new Error("Unexpected status");
                     }
-                })
+                });
             }
         }
-    }
+    };
 
     // Start the workflow and extract a token (or throw an error) when ready.
-    let context = new HandshakeContext();
+    const context = new HandshakeContext();
     return nextStep(context)
         .catch(err => {
-            return Promise.reject(err)     // somehow exception thrown inside u2fApi does not automatically reject the promise, so forcing this here
+            // somehow exception thrown inside u2fApi does not automatically reject the promise, so forcing this here
+            return Promise.reject(err);
         })
         .finally(() => {
             if (context.clientHandle) client.term(context.clientHandle);                     // ignore the outcome
             if (context.serverHandle) server.DestroyAuthentication(context.serverHandle);    // ignore the outcome
         });
 }
-
-

@@ -1,14 +1,14 @@
-import { User, Credential, Utf16, JSONWebToken, SecurityQuestions, Questions, Answers, Question } from '@digitalpersona/core';
+import { User, Credential, Utf16, JSONWebToken, Questions, Answers, Question } from '@digitalpersona/core';
 import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class SecurityQuestionsAuth extends Authenticator
 {
     constructor(authService: IAuthService) {
-        super(authService)
+        super(authService);
     }
 
-    public getQuestions(user: User): Promise<Questions>
+    public getEnrolledQuestions(user: User): Promise<Questions>
     {
         return this.authService
             .GetEnrollmentData(user, Credential.SecurityQuestions)
@@ -19,7 +19,7 @@ export class SecurityQuestionsAuth extends Authenticator
 
     public authenticate(identity: User|JSONWebToken, answers: Answers): Promise<JSONWebToken>
     {
-        return super._authenticate(identity, new SecurityQuestions({ answers}));
+        return super._authenticate(identity, new Credential(Credential.SecurityQuestions, { answers }));
     }
 
 }

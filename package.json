@@ -1,7 +1,7 @@
 {
   "name": "@digitalpersona/authentication",
   "globalObject": "dp.authentication",
-  "version": "0.1.4",
+  "version": "0.2.1",
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
@@ -62,7 +62,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@digitalpersona/services": "^0.1.4",
+    "@digitalpersona/services": "^0.2.1",
     "tslib": "^1.9.3",
     "u2f-api": "^1.0.10"
   },

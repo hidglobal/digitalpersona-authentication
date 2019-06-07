@@ -1,11 +1,11 @@
-import { User, JSONWebToken, SmartCard, ContactlessCard, ProximityCard } from '@digitalpersona/core';
+import { User, JSONWebToken, Credential } from '@digitalpersona/core';
 import { IAuthService } from '@digitalpersona/services';
 import { Authenticator } from '../../private';
 
 export class SmartCardAuth extends Authenticator
 {
     constructor(authService: IAuthService) {
-        super(authService)
+        super(authService);
     }
 
     // Authenticates the user using the card.
@@ -13,7 +13,7 @@ export class SmartCardAuth extends Authenticator
     // For smart cards this method is usually called when the user types and submits a PIN.
     public authenticate(identity: User|JSONWebToken, cardData: string): Promise<JSONWebToken>
     {
-        return super._authenticate(identity, new SmartCard(cardData));
+        return super._authenticate(identity, new Credential(Credential.SmartCard, cardData));
     }
 }
 
@@ -27,13 +27,13 @@ export class ContactlessCardAuth extends Authenticator
     // For smart cards this method is usually called when the user types and submits a PIN.
     public authenticate(identity: User|JSONWebToken, cardData: string): Promise<JSONWebToken>
     {
-        return super._authenticate(identity, new ContactlessCard(cardData));
+        return super._authenticate(identity, new Credential(Credential.ContactlessCard, cardData));
     }
 
     public identify(cardData: string): Promise<JSONWebToken>
     {
         return this.authService
-            .Identify(new ContactlessCard(cardData))
+            .Identify(new Credential(Credential.ContactlessCard, cardData))
             .then(ticket => ticket.jwt);
     }
 }
@@ -49,12 +49,12 @@ export class ProximityCardAuth extends Authenticator
     // For smart cards this method is usually called when the user types and submits a PIN.
     public authenticate(identity: User|JSONWebToken, cardData: string): Promise<JSONWebToken>
     {
-        return super._authenticate(identity, new ProximityCard(cardData));
+        return super._authenticate(identity, new Credential(Credential.ProximityCard, cardData));
     }
     public identify(cardData: string): Promise<JSONWebToken>
     {
         return this.authService
-            .Identify(new ProximityCard(cardData))
+            .Identify(new Credential(Credential.ProximityCard, cardData))
             .then(ticket => ticket.jwt);
     }
 }

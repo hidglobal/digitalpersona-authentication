@@ -1,8 +1,11 @@
-import { User, Ticket, JSONWebToken, Password } from '@digitalpersona/core';
+import { User, Ticket, JSONWebToken, Credential } from '@digitalpersona/core';
 import { IAuthService } from '@digitalpersona/services';
 import { CustomAction } from './actions';
 import { Authenticator } from '../../private';
 
+function Password(data?: string|object|null): Credential {
+    return new Credential(Credential.Password, data);
+}
 export class PasswordAuth extends Authenticator
 {
     constructor(authService: IAuthService) {
@@ -10,7 +13,7 @@ export class PasswordAuth extends Authenticator
     }
 
     public authenticate(identity: User|JSONWebToken, password: string): Promise<JSONWebToken> {
-        return super._authenticate(identity, new Password(password));
+        return super._authenticate(identity, Password(password));
     }
 
     public randomize(user: User, token: JSONWebToken): Promise<string> {
@@ -18,7 +21,7 @@ export class PasswordAuth extends Authenticator
             CustomAction.PasswordRandomization,
             new Ticket(token),
             user,
-            new Password(null));
+            Password());
     }
 
     public reset(user: User, newPassword: string, token: JSONWebToken): Promise<string> {
@@ -26,6 +29,6 @@ export class PasswordAuth extends Authenticator
             CustomAction.PasswordReset,
             new Ticket(token),
             user,
-            new Password(newPassword));
+            Password(newPassword));
     }
 }
