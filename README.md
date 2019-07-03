@@ -1,4 +1,4 @@
-# JavaScript Client for DigitalPersona Authenticatio
+# JavaScript Client for DigitalPersona Authentication
 
 This library allows web browsers to identify and authenticate users with various credentials
 using DigitalPersona Access Management services.
