@@ -1,11 +1,15 @@
 {
   "name": "@digitalpersona/authentication",
   "globalObject": "dp.authentication",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
   "description": "DigitalPersona Authentication API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hidglobal/digitalpersona-authentication"
+  },
   "author": "HID Global",
   "license": "MIT",
   "maintainers": [
@@ -57,18 +61,21 @@
     "rollup": "npm run rollup-es5 && npm run rollup-es5-min && npm run rollup-es6 && npm run rollup-es6-min",
     "test": "karma start",
     "test-once": "karma start --single-run",
-    "api": "api-extractor run --local --verbose",
-    "api-doc": "api-documenter markdown -i ./dist/api -o ./dist/api/doc",
+    "api": "mkdirp ./docs/api/ && rimraf ./dist/api && npx api-extractor run --local --verbose",
+    "api-doc": "tsc && npm run api && npx api-documenter markdown -i ./dist/api -o ./docs/api",
+    "api-all": "npm run api && npm run api-doc",
+    "local-npm": "start verdaccio",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@digitalpersona/services": "^0.2.1",
-    "tslib": "^1.9.3",
-    "u2f-api": "^1.0.10"
+    "@digitalpersona/services": "^0.2",
+    "tslib": "^1.9",
+    "u2f-api": "^1.0"
   },
+
   "devDependencies": {
     "@types/jasmine": "^3.3.9",
-    "@types/node": "^11.12.0",
+    "@types/node": "^12.0.0",
     "jasmine": "^3.3.1",
     "jasmine-core": "^3.3.0",
     "karma": "^4.0.1",
@@ -81,7 +88,7 @@
     "rollup": "^1.6.0",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-typescript2": "^0.20.1",
+    "rollup-plugin-typescript2": "^0.21.0",
     "terser": "^3.17.0",
     "tslint": "^5.14.0",
     "typescript": "^3.4.5"
