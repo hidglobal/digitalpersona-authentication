@@ -2,9 +2,7 @@
 
 ## Getting started
 
-### Install the library
-
-### Import the library into your project
+### Add the package to your project
 
 ### Write some code
 
@@ -23,3 +21,4 @@
 ### Enrollment Service
 
 ### Secrets Service
+
