@@ -1,3 +1,4 @@
+/** Finger positions. */
 export enum FingerPosition {
     Unknown         = 0,
     RightThumb      = 1,
@@ -12,12 +13,15 @@ export enum FingerPosition {
     LeftLittle      = 10,
 }
 
+/** A finger enrollment data. */
 export class Finger
 {
     constructor(
+        /** A finger position. */
         public readonly position: FingerPosition,
     ){}
 
+    /** Creates a finger enrollment data object from a plain JSON object. */
     public static fromJson(json: object)
     {
         const obj = json as Finger;
@@ -25,4 +29,5 @@ export class Finger
     }
 }
 
+/** A collection of finger enrollment data. */
 export type Fingers = Finger[];

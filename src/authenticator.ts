@@ -1,7 +1,7 @@
 import { User, CredentialId, JSONWebToken, JWT } from '@digitalpersona/core';
 import { IAuthService, IPolicyService, ResourceActions, ContextualInfo, Policy } from '@digitalpersona/services';
 
-//import { WindowsAuthClient } from './devices';
+// import { WindowsAuthClient } from './devices';
 
 /*
 @category Authentication
