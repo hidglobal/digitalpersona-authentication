@@ -61,10 +61,10 @@
     "rollup": "npm run rollup-es5 && npm run rollup-es5-min && npm run rollup-es6 && npm run rollup-es6-min",
     "test": "karma start",
     "test-once": "karma start --single-run",
-    "api": "mkdirp ./docs/api/ && rimraf ./dist/api && npx api-extractor run --local --verbose",
-    "api-doc": "tsc && npm run api && npx api-documenter markdown -i ./dist/api -o ./docs/api",
-    "api-all": "npm run api && npm run api-doc",
     "local-npm": "start verdaccio",
+    "api": "npx api-extractor run --local --verbose",
+    "api-doc": "npx api-documenter markdown -i ./dist/api -o ./dist/api/docs",
+    "api-all": "tsc && npm run api && npm run api-doc",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
