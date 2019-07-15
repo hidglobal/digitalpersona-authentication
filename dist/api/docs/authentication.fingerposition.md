@@ -4,6 +4,8 @@
 
 ## FingerPosition enum
 
+Finger positions.
+
 <b>Signature:</b>
 
 ```typescript

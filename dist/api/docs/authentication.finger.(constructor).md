@@ -9,7 +9,8 @@ Constructs a new instance of the `Finger` class
 <b>Signature:</b>
 
 ```typescript
-constructor(position: FingerPosition);
+constructor(
+    position: FingerPosition);
 ```
 
 ## Parameters

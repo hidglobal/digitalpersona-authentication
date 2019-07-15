@@ -4,6 +4,8 @@
 
 ## Fingers type
 
+A collection of finger enrollment data.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## Finger class
 
+A finger enrollment data.
+
 <b>Signature:</b>
 
 ```typescript
@@ -20,11 +22,11 @@ export declare class Finger
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [position](./authentication.finger.position.md) |  | <code>FingerPosition</code> |  |
+|  [position](./authentication.finger.position.md) |  | <code>FingerPosition</code> | A finger position. |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [fromJson(json)](./authentication.finger.fromjson.md) | <code>static</code> |  |
+|  [fromJson(json)](./authentication.finger.fromjson.md) | <code>static</code> | Creates a finger enrollment data object from a plain JSON object. |
 

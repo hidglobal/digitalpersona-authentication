@@ -4,6 +4,8 @@
 
 ## Finger.fromJson() method
 
+Creates a finger enrollment data object from a plain JSON object.
+
 <b>Signature:</b>
 
 ```typescript

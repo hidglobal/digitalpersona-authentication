@@ -11,7 +11,7 @@
 |  [ContactlessCardAuth](./authentication.contactlesscardauth.md) | Contactless card authentication API. Contactless cards support both authentication and identification. |
 |  [EmailOtpAuth](./authentication.emailotpauth.md) | A one-time password authentication API based on a electronic mail (Email OTP). Email OTP supports only authentication. Identification is not supported. |
 |  [FaceAuth](./authentication.faceauth.md) | Face authentication API. Face credential supports authentication. Identification is currently not supported by the server. |
-|  [Finger](./authentication.finger.md) |  |
+|  [Finger](./authentication.finger.md) | A finger enrollment data. |
 |  [FingerprintsAuth](./authentication.fingerprintsauth.md) | Fingerprint authentication API. Fingerprints support both authentication and identification. |
 |  [PasswordAuth](./authentication.passwordauth.md) | Password authentication API. Passwords support only authentication. Identification is not supported. |
 |  [PinAuth](./authentication.pinauth.md) | Personal Identification Number (PIN) authentication API. PIN support only authentication. Identification is not supported. |
@@ -28,11 +28,11 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [FingerPosition](./authentication.fingerposition.md) |  |
+|  [FingerPosition](./authentication.fingerposition.md) | Finger positions. |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [Fingers](./authentication.fingers.md) |  |
+|  [Fingers](./authentication.fingers.md) | A collection of finger enrollment data. |
 

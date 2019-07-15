@@ -4,6 +4,8 @@
 
 ## Finger.position property
 
+A finger position.
+
 <b>Signature:</b>
 
 ```typescript
