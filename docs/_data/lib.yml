@@ -1,0 +1,6 @@
+name: DigitalPersona Web Authentication
+shortName: DPAM Web Authentication
+git: 'https://github.com/hidglobal'
+repo: digitalpersona-authentication
+package: '@digitalpersona/authentication'
+api: authentication

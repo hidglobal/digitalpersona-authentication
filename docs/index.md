@@ -1,18 +1,37 @@
-# JavaScript Client for DigitalPersona Authentication
+---
+layout: default
+title: Overview
+has_toc: false
+nav_order: 1  
+---
+{% include header.html %}
 
-This library allows web browsers to identify and authenticate users with various credentials
-using DigitalPersona Access Management services.
+# Authentication API for {{ site.data.product.name }}
 
-## [Usage](use/index.md)
-* [Details](use/details.md)
-* [Tutorial](use/tutorial.md)
-* [How-to](use/how-to.md)
-* [Reference](use/reference.md)
+{% include dpam-intro.md %}
 
-## [Information for maintainers](maintain/index.md)
-* [Build](maintain/build.md)
-* [Test](maintain/test.md)
-* [Code](maintain/code.md)
-* [Document](maintain/document.md)
-* [Version](maintain/version.md)
-* [Deploy](maintain/deploy.md)
+As a part of DPAM, the {{ site.data.lib.name }} provides web browsers with API
+allowing to identify and authenticate users with various credentials using 
+DPAM Web Services.
+
+## Requirements
+
+{% include reqs/platforms.md %}
+
+{% include reqs/languages.md %}
+
+### Browser support
+
+{% include shims/promise.md %}
+
+{% include shims/fetch.md %}
+
+### Node JS support
+
+{% include shims/node-base64.md %}
+
+## Additional documentation:
+
+* [Tutorial](./tutorial.md)
+* [How-to](./how-to.md)
+* [Reference](./reference.md)
