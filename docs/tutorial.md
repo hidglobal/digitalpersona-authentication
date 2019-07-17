@@ -59,30 +59,31 @@ async submitFingerprints(samples: BioSample[], identity?: JSONWebToken)
 
 {% capture apiDocsBaseUrl %}{{site.data.lib.git}}/{{site.data.lib.repo}}/blob/master/dist/api/docs/authentication{% endcapture%}
 
-> For working examples see a ["Bank of DigitalPersona"](https://github.com/hidglobal/digitalpersona-sample-angularjs) sample application.
+> For working examples see a ["Bank of DigitalPersona"](https://github.com/hidglobal/digitalpersona-sample-angularjs){ _target="blank" }
+sample application.
 
 ### "What you know" authentication factors
 
-* [PasswordAuth]({{apiDocsBaseUrl}}.PasswordAuth.md)
-* [PinAuth]({{apiDocsBaseUrl}}.PinAuth.md)
-* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.SecurityQuestionsAuth.md)
+* [PasswordAuth]({{apiDocsBaseUrl}}.passwordauth.md){ _target="blank" }
+* [PinAuth]({{apiDocsBaseUrl}}.pinauth.md){ _target="blank" }
+* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.securityquestionsAuth.md){ _target="blank" }
 
 ### "What you are" authentication factors
 
-* [FingerprintsAuth](({{apiDocsBaseUrl}}.FingerprintsAuth.md))
-* [FaceAuth](({{apiDocsBaseUrl}}.FaceAuth.md))
+* [FingerprintsAuth](({{apiDocsBaseUrl}}.fingerprintsauth.md)){ _target="blank" }
+* [FaceAuth](({{apiDocsBaseUrl}}.faceauth.md)){ _target="blank" }
 
 ### "What you have" authentication factors
 
-* [SmartCardAuth](({{apiDocsBaseUrl}}.SmartCardAuth.md))
-* [ContactlessCardAuth](({{apiDocsBaseUrl}}.ContactlessCardAuth.md))
-* [ProximityCardAuth](({{apiDocsBaseUrl}}.ProximityCardAuth.md))
-* [U2FAuth](({{apiDocsBaseUrl}}.U2FAuth.md))
-* [TimeOtpAuth](({{apiDocsBaseUrl}}.TimeOtpAuth.md))
-* [SmsOtpAuth](({{apiDocsBaseUrl}}.SmsOtpAuth.md))
-* [EmailOtpAuth](({{apiDocsBaseUrl}}.EmailOtpAuth.md))
+* [SmartCardAuth](({{apiDocsBaseUrl}}.smartcardauth.md)){ _target="blank" }
+* [ContactlessCardAuth](({{apiDocsBaseUrl}}.contactlesscardauth.md)){ _target="blank" }
+* [ProximityCardAuth](({{apiDocsBaseUrl}}.proximitycardauth.md)){ _target="blank" }
+* [U2FAuth](({{apiDocsBaseUrl}}.u2fauth.md)){ _target="blank" }
+* [TimeOtpAuth](({{apiDocsBaseUrl}}.timeotpauth.md)){ _target="blank" }
+* [SmsOtpAuth](({{apiDocsBaseUrl}}.smsotpauth.md)){ _target="blank" }
+* [EmailOtpAuth](({{apiDocsBaseUrl}}.emailotpauth.md)){ _target="blank" }
 
 
 ### Federated authentication
 
-* [WindowsAuth](({{apiDocsBaseUrl}}.WindowsAuth.md))
+* [WindowsAuth](({{apiDocsBaseUrl}}.windowsauth.md))
