@@ -59,29 +59,29 @@ async submitFingerprints(samples: BioSample[], identity?: JSONWebToken)
 
 {% capture apiDocsBaseUrl %}{{site.data.lib.git}}/{{site.data.lib.repo}}/blob/master/dist/api/docs/authentication{% endcapture%}
 
-> For working examples see a ["Bank of DigitalPersona"](https://github.com/hidglobal/digitalpersona-sample-angularjs){ _target="blank" }
+> For working examples see a ["Bank of DigitalPersona"](https://github.com/hidglobal/digitalpersona-sample-angularjs){:target="_blank" }
 sample application.
 
 ### "What you know" authentication factors
 
-* [PasswordAuth]({{apiDocsBaseUrl}}.passwordauth.md){ _target="blank" }
-* [PinAuth]({{apiDocsBaseUrl}}.pinauth.md){ _target="blank" }
-* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.securityquestionsAuth.md){ _target="blank" }
+* [PasswordAuth]({{apiDocsBaseUrl}}.passwordauth.md){:target="_blank" }
+* [PinAuth]({{apiDocsBaseUrl}}.pinauth.md){:target="_blank" }
+* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.securityquestionsAuth.md){:target="_blank" }
 
 ### "What you are" authentication factors
 
-* [FingerprintsAuth](({{apiDocsBaseUrl}}.fingerprintsauth.md)){ _target="blank" }
-* [FaceAuth](({{apiDocsBaseUrl}}.faceauth.md)){ _target="blank" }
+* [FingerprintsAuth](({{apiDocsBaseUrl}}.fingerprintsauth.md)){:target="_blank" }
+* [FaceAuth](({{apiDocsBaseUrl}}.faceauth.md)){:target="_blank" }
 
 ### "What you have" authentication factors
 
-* [SmartCardAuth](({{apiDocsBaseUrl}}.smartcardauth.md)){ _target="blank" }
-* [ContactlessCardAuth](({{apiDocsBaseUrl}}.contactlesscardauth.md)){ _target="blank" }
-* [ProximityCardAuth](({{apiDocsBaseUrl}}.proximitycardauth.md)){ _target="blank" }
-* [U2FAuth](({{apiDocsBaseUrl}}.u2fauth.md)){ _target="blank" }
-* [TimeOtpAuth](({{apiDocsBaseUrl}}.timeotpauth.md)){ _target="blank" }
-* [SmsOtpAuth](({{apiDocsBaseUrl}}.smsotpauth.md)){ _target="blank" }
-* [EmailOtpAuth](({{apiDocsBaseUrl}}.emailotpauth.md)){ _target="blank" }
+* [SmartCardAuth](({{apiDocsBaseUrl}}.smartcardauth.md)){:target="_blank" }
+* [ContactlessCardAuth](({{apiDocsBaseUrl}}.contactlesscardauth.md)){:target="_blank" }
+* [ProximityCardAuth](({{apiDocsBaseUrl}}.proximitycardauth.md)){:target="_blank" }
+* [U2FAuth](({{apiDocsBaseUrl}}.u2fauth.md)){:target="_blank" }
+* [TimeOtpAuth](({{apiDocsBaseUrl}}.timeotpauth.md)){:target="_blank" }
+* [SmsOtpAuth](({{apiDocsBaseUrl}}.smsotpauth.md)){:target="_blank" }
+* [EmailOtpAuth](({{apiDocsBaseUrl}}.emailotpauth.md)){:target="_blank" }
 
 
 ### Federated authentication
