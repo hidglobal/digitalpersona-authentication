@@ -10,7 +10,7 @@ nav_order: 1
 
 {% include dpam-intro.md %}
 
-As a part of {{ site.data.product.shortName }}, the {{ site.data.lib.name }}
+As a part of {{ site.data.product.shortName }}, the {{ site.data.lib.name }} API
 allows you to strengthen your web application security with multifactor authentication (MFA), working seamlessly with various authentication such as  fingerprint readers, card readers,
 cameras for face recognition, FIDO tokens, OTP tokens, as well as with traditional credentials like passwords, PINs and Security Questions.
 
@@ -23,7 +23,7 @@ The library depends on the:
 It also requires the  DigitalPersona Web Components and DigitalPersona Authentication Server running in your security domain.
 
 Some authentication tokens (fingerprints, cards, U2F, Integrated Windows Authentication)
-require the DigitalPersona Device Access API to read authentication data from a device and pass it to 
+require the DigitalPersona Device Access API to read authentication data from a device and pass it to
 the {{ site.data.lib.shortName }}.
 
 ## Requirements
