@@ -1,7 +1,7 @@
 {
   "name": "@digitalpersona/authentication",
   "globalObject": "dp.authentication",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/hidglobal/digitalpersona-authentication"
@@ -49,7 +49,7 @@
   "typings": "./dist/typings/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "npm run clean && npm run tsc-all && npm run rollup",
+    "build": "npm run clean && npm run tsc-all && npm run rollup && npm run api && npm run api-doc",
     "tsc": "tsc",
     "tsc-es5": "tsc --p ./build/tsconfig/tsconfig.es5.json",
     "tsc-es6": "tsc --p ./build/tsconfig/tsconfig.es6.json",
@@ -72,7 +72,6 @@
     "tslib": "^1.9",
     "u2f-api": "^1.0"
   },
-
   "devDependencies": {
     "@types/jasmine": "^3.3",
     "@types/node": "^12.0",
@@ -92,8 +91,5 @@
     "terser": "^3.17",
     "tslint": "^5.14",
     "typescript": "^3.5"
-  },
-  "resolutions": {
-    "lodash": "^4.17.13"
   }
 }
