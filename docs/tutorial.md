@@ -66,7 +66,7 @@ sample application.
 
 * [PasswordAuth]({{apiDocsBaseUrl}}.passwordauth.md){:target="_blank" }
 * [PinAuth]({{apiDocsBaseUrl}}.pinauth.md){:target="_blank" }
-* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.securityquestionsAuth.md){:target="_blank" }
+* [SecurityQuestionsAuth]({{apiDocsBaseUrl}}.securityquestionsauth.md){:target="_blank" }
 
 ### "What you are" authentication factors
 
