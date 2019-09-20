@@ -1,7 +1,7 @@
 {
   "name": "@digitalpersona/authentication",
   "globalObject": "dp.authentication",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/hidglobal/digitalpersona-authentication"
@@ -65,7 +65,7 @@
     "api": "npx api-extractor run --local --verbose",
     "api-doc": "npx api-documenter markdown -i ./dist/api -o ./dist/api/docs",
     "api-all": "tsc && npm run api && npm run api-doc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build && npm run test-once"
   },
   "dependencies": {
     "@digitalpersona/services": "^0.2",
