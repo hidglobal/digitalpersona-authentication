@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Ticket, Credential } from '@digitalpersona/core';
 import { CustomAction } from './actions';
 import { Authenticator } from '../../private';
@@ -10,7 +10,7 @@ function Password(data) {
  * Passwords support only authentication. Identification is not supported.
  */
 var PasswordAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(PasswordAuth, _super);
+    __extends(PasswordAuth, _super);
     /** Constructs a new password authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

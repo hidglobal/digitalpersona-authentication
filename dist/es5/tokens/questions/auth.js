@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Credential, Utf16, Question } from '@digitalpersona/core';
 import { Authenticator } from '../../private';
 /**
@@ -6,7 +6,7 @@ import { Authenticator } from '../../private';
  * Security Questions support only authentication. Identification is not supported.
  */
 var SecurityQuestionsAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(SecurityQuestionsAuth, _super);
+    __extends(SecurityQuestionsAuth, _super);
     /** Constructs a new Security Questions authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

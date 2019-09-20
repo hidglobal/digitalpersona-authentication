@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Credential } from '@digitalpersona/core';
 import { Authenticator } from '../../private';
 /**
@@ -6,7 +6,7 @@ import { Authenticator } from '../../private';
  * Smartcards supports only authentication with PIN. Identification is not supported.
  */
 var SmartCardAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(SmartCardAuth, _super);
+    __extends(SmartCardAuth, _super);
     /** Constructs a new smartcard authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
@@ -34,7 +34,7 @@ export { SmartCardAuth };
  * Contactless cards support both authentication and identification.
  */
 var ContactlessCardAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(ContactlessCardAuth, _super);
+    __extends(ContactlessCardAuth, _super);
     /** Constructs a new contactless authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
@@ -76,7 +76,7 @@ export { ContactlessCardAuth };
  * Proximity cards support both authentication and identification.
  */
 var ProximityCardAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(ProximityCardAuth, _super);
+    __extends(ProximityCardAuth, _super);
     /** Constructs a new proximity authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

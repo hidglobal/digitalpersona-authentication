@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Credential } from '@digitalpersona/core';
 import { Authenticator } from '../../private';
 /**
@@ -6,7 +6,7 @@ import { Authenticator } from '../../private';
  * Face credential supports authentication. Identification is currently not supported by the server.
  */
 var FaceAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(FaceAuth, _super);
+    __extends(FaceAuth, _super);
     /** Constructs a new face authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
