@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends, __read } from "tslib";
 import { User, Ticket, Credential } from '@digitalpersona/core';
 import { CustomAction } from './actions';
 import { Authenticator } from '../../private';
@@ -10,7 +10,7 @@ function OTP(data) {
  * TOTP supports only authentication. Identification is not supported.
  */
 var TimeOtpAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(TimeOtpAuth, _super);
+    __extends(TimeOtpAuth, _super);
     /** Constructs a new TOTP authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
@@ -38,7 +38,7 @@ var TimeOtpAuth = /** @class */ (function (_super) {
      * @returns a promise to return an unlock code that the locked device user must type in.
      */
     TimeOtpAuth.prototype.getUnlockCode = function (userOrSerialNumber, challenge, token) {
-        var _a = tslib_1.__read((userOrSerialNumber instanceof User)
+        var _a = __read((userOrSerialNumber instanceof User)
             ? [userOrSerialNumber, null]
             : [User.Anonymous(), userOrSerialNumber], 2), user = _a[0], serialNumber = _a[1];
         return this.authService
@@ -52,7 +52,7 @@ export { TimeOtpAuth };
  * Push OTP supports only authentication. Identification is not supported.
  */
 var PushOtpAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(PushOtpAuth, _super);
+    __extends(PushOtpAuth, _super);
     /** Constructs a new Push OTP authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
@@ -86,7 +86,7 @@ export { PushOtpAuth };
  * SMS OTP supports only authentication. Identification is not supported.
  */
 var SmsOtpAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(SmsOtpAuth, _super);
+    __extends(SmsOtpAuth, _super);
     /** Constructs a new SMS OTP authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
@@ -126,7 +126,7 @@ export { SmsOtpAuth };
  * Email OTP supports only authentication. Identification is not supported.
  */
 var EmailOtpAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(EmailOtpAuth, _super);
+    __extends(EmailOtpAuth, _super);
     /** Constructs a new Email OTP authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

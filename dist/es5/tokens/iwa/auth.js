@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Credential } from '@digitalpersona/core';
 import { Authenticator } from '../../private';
 /**
@@ -6,7 +6,7 @@ import { Authenticator } from '../../private';
  * IWA support only authentication. Identification is not supported.
  */
 var WindowsAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(WindowsAuth, _super);
+    __extends(WindowsAuth, _super);
     /** Constructs a new integrated Windows authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

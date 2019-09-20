@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import { Utf8, Credential } from '@digitalpersona/core';
 import { Finger } from './data';
 import { Authenticator } from '../../private';
@@ -7,7 +7,7 @@ import { Authenticator } from '../../private';
  * Fingerprints support both authentication and identification.
  */
 var FingerprintsAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(FingerprintsAuth, _super);
+    __extends(FingerprintsAuth, _super);
     /** Constructs a new fingerprint authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */

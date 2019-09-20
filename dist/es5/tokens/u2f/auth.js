@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __extends } from "tslib";
 import * as u2fApi from 'u2f-api';
 import { User, Credential, Ticket } from '@digitalpersona/core';
 import { Authenticator } from '../../private';
@@ -9,7 +9,7 @@ import { U2FClient } from './client';
  * U2F support only authentication. Identification is not supported.
  */
 var U2FAuth = /** @class */ (function (_super) {
-    tslib_1.__extends(U2FAuth, _super);
+    __extends(U2FAuth, _super);
     /** Constructs a new U2F authentication API object.
      * @param authService - an {@link AuthService|authentication service client} connected to the server.
      */
