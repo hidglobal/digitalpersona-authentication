@@ -70,20 +70,20 @@ sample application.
 
 ### "What you are" authentication factors
 
-* [FingerprintsAuth](({{apiDocsBaseUrl}}.fingerprintsauth.md)){:target="_blank" }
-* [FaceAuth](({{apiDocsBaseUrl}}.faceauth.md)){:target="_blank" }
+* [FingerprintsAuth]({{apiDocsBaseUrl}}.fingerprintsauth.md){:target="_blank" }
+* [FaceAuth]({{apiDocsBaseUrl}}.faceauth.md){:target="_blank" }
 
 ### "What you have" authentication factors
 
-* [SmartCardAuth](({{apiDocsBaseUrl}}.smartcardauth.md)){:target="_blank" }
-* [ContactlessCardAuth](({{apiDocsBaseUrl}}.contactlesscardauth.md)){:target="_blank" }
-* [ProximityCardAuth](({{apiDocsBaseUrl}}.proximitycardauth.md)){:target="_blank" }
-* [U2FAuth](({{apiDocsBaseUrl}}.u2fauth.md)){:target="_blank" }
-* [TimeOtpAuth](({{apiDocsBaseUrl}}.timeotpauth.md)){:target="_blank" }
-* [SmsOtpAuth](({{apiDocsBaseUrl}}.smsotpauth.md)){:target="_blank" }
-* [EmailOtpAuth](({{apiDocsBaseUrl}}.emailotpauth.md)){:target="_blank" }
+* [SmartCardAuth]({{apiDocsBaseUrl}}.smartcardauth.md){:target="_blank" }
+* [ContactlessCardAuth]({{apiDocsBaseUrl}}.contactlesscardauth.md){:target="_blank" }
+* [ProximityCardAuth]({{apiDocsBaseUrl}}.proximitycardauth.md){:target="_blank" }
+* [U2FAuth]({{apiDocsBaseUrl}}.u2fauth.md){:target="_blank" }
+* [TimeOtpAuth]({{apiDocsBaseUrl}}.timeotpauth.md){:target="_blank" }
+* [SmsOtpAuth]({{apiDocsBaseUrl}}.smsotpauth.md){:target="_blank" }
+* [EmailOtpAuth]({{apiDocsBaseUrl}}.emailotpauth.md){:target="_blank" }
 
 
 ### Federated authentication
 
-* [WindowsAuth](({{apiDocsBaseUrl}}.windowsauth.md))
+* [WindowsAuth]{{apiDocsBaseUrl}}.windowsauth.md)
