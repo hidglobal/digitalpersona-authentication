@@ -86,4 +86,4 @@ sample application.
 
 ### Federated authentication
 
-* [WindowsAuth]{{apiDocsBaseUrl}}.windowsauth.md)
+* [WindowsAuth]({{apiDocsBaseUrl}}.windowsauth.md){:target="_blank" }
